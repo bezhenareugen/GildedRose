@@ -8,36 +8,21 @@ namespace GildedRose.Console
 {
     class Program
     {
-
-        private readonly IItemStorage _itemStorage;
-        private readonly IUpdateQuality _updateQuality;
-
-        public Program()
-        {
-        }
-
-        public Program(IItemStorage itemStorage, IUpdateQuality updateQuality)
-        {
-            _itemStorage = itemStorage;
-            _updateQuality = updateQuality;
-        }
-
         static void Main(string[] args)
         {
-            System.Console.WriteLine("OMGHAI!");
 
-            var app = new Program();
+            var updateQuality = new UpdateQuality();
 
-            var items = app._itemStorage?.GetItems();
+            var updatedItems =  updateQuality.UpdateQualityMethod();
 
-
-
-            app._updateQuality?.UpdateQualityMethod(items);
-
+          
+            foreach (var item in updatedItems)
+            {
+                System.Console.WriteLine(item.Name + " | " + item.SellIn + " | " + item.Quality);
+            }
 
             System.Console.ReadKey();
 
         }
     }
-
 }

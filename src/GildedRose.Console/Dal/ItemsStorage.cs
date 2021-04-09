@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace GildedRose.Console.Dal
 {
-    public class ItemsStorage : IItemStorage
+    public class ItemsStorage
     {
-        List<Item> IItemStorage.GetItems()
+      public List<Item> GetItems()
         {
             var items = new List<Item>
             {

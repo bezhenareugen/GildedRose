@@ -43,9 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bll\IUpdateQuality.cs" />
     <Compile Include="Bll\UpdateQuality.cs" />
-    <Compile Include="Dal\IItemStorage.cs" />
+    <Compile Include="Bll\UpdateQulityMethods.cs" />
     <Compile Include="Dal\ItemsStorage.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Program.cs" />
